@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Visit Qazaqstan</title>
+      <link href="style.css" rel="stylesheet" type="text/css" />
+      <link rel="shortcut icon" href="assets\ronin.ico" type="image/x-icon">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+      <!-- Stylesheets -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+      <link rel="stylesheet" href="style.css">
+      <!-- Fontawesome -->
+      <script src="https://kit.fontawesome.com/c98d165499.js" crossorigin="anonymous"></script>
+      <!-- Bootstrap Scripts -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/b5c718a36e.js" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <!-- Navbar -->
+      <section id="title">
+         <div class="container-fluid">
+         <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+            <a class="navbar-brand" href="#"><i class="fas fa-route"></i> Visit Qazaqstan</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="#" onclick="about()">About<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="Booking.html">Booking</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="https://telegram.me/VisitQazaqstan_bot" target="_blank">Telegram Bot</a>
+                  </li>
+               </ul>
+               <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+                  <a class="nav-link" href="signIn.html">Sign in</a>
+               </form>
+            </div>
+         </nav>
+      </section>
+      <!-- Time and weather -->
+      <hr>
+      <div class="text-center">
+         <h3>Nur-Sultan's local time</h3>
+         <div id="clock">8:10:45</div>
+      </div>
+      <br>
+      <a class="weatherwidget-io" href="https://forecast7.com/en/51d1671d47/astana/" data-label_1="NUR-SULTAN" data-label_2="WEATHER" data-theme="original" >NUR-SULTAN WEATHER</a>
+      <script>
+         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+      </script>
+      <br>
+      <!-- Buttons -->
+      <section class="text-center">
+         <div class="btn-group">
+            <button class="button" onclick="openWin()">Accommodation <i class="fas fa-hotel"></i></button>
+            <button class="button" onclick="trans()">Transport <i class="fas fa-car"></i></button>
+            <button class="button" onclick="food()">Food <i class="fas fa-utensils"></i></button>
+            <button class="button" onclick="down()">Guidebook <i class="fas fa-atlas"></i></button>
+         </div>
+      </section>
+      <!-- information -->
+      <section>
+         <div class="align">
+            <img class="center" src="assets\almaty.jpg" alt="almaty">
+            <h2>Welcome to Qazaqstan</h2>
+            <p class="mai">The world’s ninth-biggest country is the most economically advanced of the ‘stans’, thanks to its abundant reserves of oil and most other valuable minerals. This means generally better standards of accommodation, restaurants and transport than elsewhere in Central Asia. The biggest city, Almaty, is almost reminiscent of Europe with its leafy avenues, chic ALZhiR Museum-Memorial Complex, glossy shopping centres and hedonistic nightlife. The capital Nur-Sultan, on the windswept northern steppe, has been transformed into a 21st-century showpiece with a profusion of bold futuristic architecture. But it's beyond the cities that you'll find the greatest travel adventures, whether hiking in the high mountains and green valleys of the Tian Shan, searching for wildlife on the lake-dotted steppe, enjoying homespun hospitality in village guesthouses, or jolting across the western deserts to remote underground mosques.</p>
+         </div>
+      </section>
+      <!-- Video -->
+      <div class="video">
+         <video class="center" src="assets\video.mp4" width="1200" controls >⁪</video>
+      </div>
+      <!-- Time and weather -->
+      <!-- Map -->
+      <div id="map">
+      </div>
+      <!-- Carousel -->
+      <div class="container my-4">
+      <!--Carousel Wrapper-->
+      <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+         <!--Controls-->
+         <div class="controls-top">
+            <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+            <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+               class="fas fa-chevron-right"></i></a>
+         </div>
+         <!--/.Controls-->
+         <!--Indicators-->
+         <ol class="carousel-indicators">
+            <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+            <li data-target="#multi-item-example" data-slide-to="1"></li>
+         </ol>
+         <!--/.Indicators-->
+         <!--Slides-->
+         <div class="carousel-inner" role="listbox">
+            <!--First slide-->
+            <div class="carousel-item active">
+               <div class="col-md-3" style="float:left">
+                  <div class="card mb-2">
+                     <img class="card-img-top"
+                        src="assets\usturt.jpg" alt="Card image cap">
+                     <div class="card-body">
+                        <h4 class="card-title">Ustyurt</h4>
+                        <p class="card-text">The Ustyurt or Ust-Yurt (Russian: Устюрт; Kazakh: Үстірт; Uzbek: Ustyurt; Turkmen: Üstyurt) is a transboundary clay desert shared by Turkmenistan, Uzbekistan and Kazakhstan.</p>
+                        <a class="btn btn-primary" onclick="futh()">Futher</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3" style="float:left">
+                  <div class="card mb-2">
+                     <img class="card-img-top"
+                        src="assets\kapcha.jpg" alt="Card image cap">
+                     <div class="card-body">
+                        <h4 class="card-title">Kapchagay</h4>
+                        <p class="card-text">Kapchagay Reservoir, also spelled Qapshaghay Bogeni Reservoir and sometimes referred to as Lake Kapchagay, is a major reservoir in Almaty Region in southeastern Kazakhstan, approximately 60 kilometres north of Almaty.</p>
+                        <a class="btn btn-primary" onclick="futh()">Futher</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3" style="float:left">
+                  <div class="card mb-2">
+                     <img class="card-img-top"
+                        src="assets\desert.jpg" alt="Card image cap">
+                     <div class="card-body">
+                        <h4 class="card-title">Singing Barkhan</h4>
+                        <p class="card-text">The so-called “singing barkhan”, consisting of sand of light tones, has a length of up to 3 km and a height of 150 m. It is located in the Altyn-Emel National Park in the Almaty region, 182 km north-east of Almaty.</p>
+                        <a class="btn btn-primary" onclick="futh()">Futher</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3" style="float:left">
+                  <div class="card mb-2">
+                     <img class="card-img-top"
+                        src="assets\char.jpg" alt="Card image cap">
+                     <div class="card-body">
+                        <h4 class="card-title">Charyn</h4>
+                        <p class="card-text">Charyn Canyon is a canyon on the Sharyn River in Kazakhstan. The canyon is roughly 90 kilometres (56 mi) in length. It is part of the Charyn National Park (established on 23 February 2004), and is located within the territory of the Uygur District, Raiymbek District and Enbekshikazakh District (of the Almaty Province).</p>
+                        <a class="btn btn-primary" onclick="futh()">Futher</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--/.First slide-->
+            <!--Second slide-->
+            <div class="carousel-item">
+               <div class="col-md-3" style="float:left">
+                  <div class="card mb-2">
+                     <img class="card-img-top"
+                        src="assets\boro.jpg" alt="Card image cap">
+                     <div class="card-body">
+                        <h4 class="card-title">Burabay</h4>
+                        <p class="card-text">Burabay is one prominent lake of a group of lakes that share the same name in northern Kazakhstan, located in the Burabay District of Akmola Region, in the eastern foothills of Mount Kokshe.</p>
+                        <a class="btn btn-primary" onclick="futh()">Futher</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3" style="float:left">
+                  <div class="card mb-2">
+                     <img class="card-img-top"
+                        src="assets\bayan.jpg" alt="Card image cap">
+                     <div class="card-body">
+                        <h4 class="card-title">Bayanaul</h4>
+                        <p class="card-text">Bayanaul National Park is a national park of Kazakhstan, located in southeastern Pavlodar Province, 140 kilometers from the industrially developed city of Ekibastuz, on the outskirts of the Central Kazakh Uplands.</p>
+                        <a class="btn btn-primary" onclick="futh()">Futher</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3" style="float:left">
+                  <div class="card mb-2">
+                     <img class="card-img-top"
+                        src="assets\bao.jpg" alt="Card image cap">
+                     <div class="card-body">
+                        <h4 class="card-title">BAL</h4>
+                        <p class="card-text">Big Almaty Lake is natural alpine reservoir. It is located in the Trans-Ili Alatau mountains, 15 km south from the center of Almaty in Kazakhstan. The lake is 2511 meters above sea level.</p>
+                        <a class="btn btn-primary" onclick="futh()">Futher</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3" style="float:left">
+                  <div class="card mb-2">
+                     <img class="card-img-top"
+                        src="assets\aksu.jpg" alt="Card image cap">
+                     <div class="card-body">
+                        <h4 class="card-title">Aksu</h4>
+                        <p class="card-text">The Aksu-Zhabagly Nature Reserve is the oldest nature reserve in Central Asia. It is located in the southern province of the Republic of Kazakhstan.</p>
+                        <a class="btn btn-primary" onclick="futh()">Futher</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--/.Second slide-->
+         </div>
+         <!--/.Slides-->
+      </div>
+      <!-- Footer -->
+      <footer class="bg-light text-center text-white">
+         <!-- Grid container -->
+         <div class="container">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+               <!-- Facebook -->
+               <a
+                  class="btn btn-primary btn-floating m-1"
+                  style="background-color: #3b5998;"
+                  href="#!"
+                  role="button"
+                  ><i class="fab fa-facebook-f"></i
+                  ></a>
+               <!-- Twitter -->
+               <a
+                  class="btn btn-primary btn-floating m-1"
+                  style="background-color: #55acee;"
+                  href="#!"
+                  role="button"
+                  ><i class="fab fa-twitter"></i
+                  ></a>
+               <!-- Google -->
+               <a
+                  class="btn btn-primary btn-floating m-1"
+                  style="background-color: #dd4b39;"
+                  href="#!"
+                  role="button"
+                  ><i class="fab fa-google"></i
+                  ></a>
+               <!-- Instagram -->
+               <a
+                  class="btn btn-primary btn-floating m-1"
+                  style="background-color: #ac2bac;"
+                  href="#!"
+                  role="button"
+                  ><i class="fab fa-instagram"></i
+                  ></a>
+               <!-- Linkedin -->
+               <a
+                  class="btn btn-primary btn-floating m-1"
+                  style="background-color: #0082ca;"
+                  href="#!"
+                  role="button"
+                  ><i class="fab fa-linkedin-in"></i
+                  ></a>
+               <!-- Github -->
+               <a
+                  class="btn btn-primary btn-floating m-1"
+                  style="background-color: #333333;"
+                  href="#!"
+                  role="button"
+                  ><i class="fab fa-github"></i
+                  ></a>
+            </section>
+            <!-- Section: Social media -->
+         </div>
+         <!-- Grid container -->
+         <!-- Copyright -->
+         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">VisitQazaqstan.kz</a>
+         </div>
+         <!-- Copyright -->
+      </footer>
+      <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAk7Kx1KEIoJ_fWksDIYVxavCaQOXH_rOQ&callback=initMap&libraries=&v=weekly"
+      async>
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+      <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+      <script src="script.js"></script>
+    </script>
+   </body>
+</html>
+
